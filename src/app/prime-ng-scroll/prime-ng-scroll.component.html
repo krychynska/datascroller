@@ -1,0 +1,9 @@
+<mat-list>
+<p-dataScroller [value]="heroes" [rows]="15">
+    <ng-template let-hero pTemplate="item">
+      <mat-list-item>
+        {{hero.firstName}} {{hero.lastName}}
+      </mat-list-item>
+    </ng-template>
+</p-dataScroller>
+</mat-list>
