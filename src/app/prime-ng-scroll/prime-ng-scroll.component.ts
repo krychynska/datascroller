@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {SuperheroesService} from '../shared/services/superheroes.service';
 
 @Component({
@@ -7,14 +7,22 @@ import {SuperheroesService} from '../shared/services/superheroes.service';
   styleUrls: ['./prime-ng-scroll.component.scss']
 })
 export class PrimeNgScrollComponent implements OnInit {
-  heroes;
+  @Input() heroes;
 
   constructor(private heroesService: SuperheroesService) {
   }
 
   async ngOnInit() {
-    this.heroes = await this.heroesService.getHeroes();
-    console.log(this.heroes);
+    // this.heroes = await this.heroesService.getHeroes();
+    // console.log(this.heroes);
   }
+  // for lazy load data
 
+ async loadData(event) {
+    console.log(event);
+    const offset = event.first;
+    const limit = event.limit;
+    this.heroes = await this.heroesService.getHeroesLazy(offset, limit);
+   // in real application you would have to add new data that comes from server to existing array of heroes (filter, concat)
+  }
 }

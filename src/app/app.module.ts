@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatListModule, MatTabsModule, MatToolbarModule} from '@angular/material';
+import {MatButtonModule, MatListModule, MatTabsModule, MatToolbarModule} from '@angular/material';
 import { ContainerComponent } from './container/container.component';
 import { PrimeNgScrollComponent } from './prime-ng-scroll/prime-ng-scroll.component';
 import { NgxInfiniteScrollComponent } from './ngx-infinite-scroll/ngx-infinite-scroll.component';
@@ -24,6 +24,7 @@ import {HttpClientModule} from '@angular/common/http';
     HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    MatButtonModule,
     MatListModule,
     MatTabsModule,
     DataScrollerModule,

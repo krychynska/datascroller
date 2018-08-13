@@ -12,4 +12,8 @@ export class SuperheroesService {
   getHeroes() {
     return data;
   }
+  getHeroesLazy(offset, limit) {
+    return this.httpClient.get(`url/${offset}/url/${limit}`);
+   // return data;
+  }
 }

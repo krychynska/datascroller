@@ -1,3 +1,18 @@
-<p>
-  ngx-infinite-scroll works!
-</p>
+<div class="button">
+  <button mat-raised-button color="warn" (click)="reset()">reset</button>
+</div>
+
+<div class="main-panel">
+   <div infiniteScroll
+        [infiniteScrollDistance]="2"
+        [infiniteScrollThrottle]="10"
+        [infiniteScrollContainer]="selector"
+        [fromRoot]="true"
+        (scrolled)="onScroll()">
+     <mat-list>
+       <mat-list-item *ngFor="let hero of heroes">
+         {{hero.firstName}} {{hero.lastName}}
+       </mat-list-item>
+     </mat-list>
+   </div>
+ </div>

@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AACE,iBAAY;EACV,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,MAAM;AAEpB,aAAO;EACL,UAAU,EAAE,IAAI;EAChB,QAAQ,EAAE,KAAK;EACf,KAAK,EAAE,IAAI;EACX,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,KAAK;EACd,oBAAO;IACL,UAAU,EAAE,MAAM;IAClB,cAAc,EAAE,SAAS",
+"sources": ["ngx-infinite-scroll.component.scss"],
 "names": [],
 "file": "ngx-infinite-scroll.component.css"
 }

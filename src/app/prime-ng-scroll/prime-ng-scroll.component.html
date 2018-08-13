@@ -1,5 +1,6 @@
 <mat-list>
 <p-dataScroller [value]="heroes" [rows]="15">
+  <!--<p-dataScroller [value]="heroes" [rows]="10" (onLazyLoad)="loadData($event)" [lazy]="true">-->
     <ng-template let-hero pTemplate="item">
       <mat-list-item>
         {{hero.firstName}} {{hero.lastName}}

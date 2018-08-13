@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {SuperheroesService} from '../shared/services/superheroes.service';
 
 @Component({
   selector: 'app-container',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./container.component.scss']
 })
 export class ContainerComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  heroes;
+  constructor(private heroesService: SuperheroesService) {
   }
+
+  async ngOnInit() {
+    this.heroes = await this.heroesService.getHeroes();
+  }
+
 
 }
