@@ -1,7 +1,30 @@
 <mat-tab-group color="accent">
+  <mat-tab label="Checkbox" color="accent">
+    <section *ngFor="let day of arrayDays; index as i">
+      <label class="coolbox" [ngClass]="{'active': day.checked==true, 'not-active': day.checked===false}">
+        <!--<input type="checkbox" [value]="day" (click)="checked(day)"/>-->
+        <input type="checkbox"
+               [name]="day.name"
+               [value]="day.value"
+               (click)="checked()"
+               [(ngModel)]="day.checked"/>
+        <span>{{day.name}}</span>
+      </label>
+    </section>
+
+    <!--<label class="coolbox" [ngClass]="{'active': isActive==true, 'not-active': isActive===false}">-->
+    <!--<input type="checkbox" name="M" value="M"/>-->
+    <!--<span>M</span>-->
+    <!--</label>-->
+    <!--<label class="coolbox" [ngClass]="{'active': isActive==true, 'not-active': isActive===false}">-->
+    <!--<input type="checkbox" name="G" value="GG"/>-->
+    <!--<span>G</span>-->
+    <!--</label>-->
+  </mat-tab>
   <mat-tab label="ngx-infinite-scroll" color="accent">
     <app-ngx-infinite-scroll [heroes]="heroes"></app-ngx-infinite-scroll>
   </mat-tab>
   <mat-tab label="PrimeNG" color="accent">
-    <app-prime-ng-scroll [heroes]="heroes"></app-prime-ng-scroll> </mat-tab>
+    <app-prime-ng-scroll [heroes]="heroes"></app-prime-ng-scroll>
+  </mat-tab>
 </mat-tab-group>
