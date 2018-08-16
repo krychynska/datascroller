@@ -3,15 +3,23 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule, MatListModule, MatTabsModule, MatToolbarModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatCheckboxModule, MatFormFieldModule,
+  MatInputModule,
+  MatListModule,
+  MatTabsModule,
+  MatToolbarModule
+} from '@angular/material';
 import { ContainerComponent } from './container/container.component';
 import { PrimeNgScrollComponent } from './prime-ng-scroll/prime-ng-scroll.component';
 import { NgxInfiniteScrollComponent } from './ngx-infinite-scroll/ngx-infinite-scroll.component';
-import {DataScrollerModule} from 'primeng/primeng';
+import {CalendarModule, DataScrollerModule} from 'primeng/primeng';
 import {InfiniteScrollModule} from 'ngx-infinite-scroll';
 import {SuperheroesService} from './shared/services/superheroes.service';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FeaturesComponent } from './features/features.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +27,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     ContainerComponent,
     PrimeNgScrollComponent,
     NgxInfiniteScrollComponent,
+    FeaturesComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +41,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatListModule,
     MatTabsModule,
     DataScrollerModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    CalendarModule,
+    MatFormFieldModule,
+    MatInputModule
     ],
   providers: [SuperheroesService],
   bootstrap: [AppComponent]

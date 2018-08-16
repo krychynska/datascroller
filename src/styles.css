@@ -1,13 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
-@import url(~@angular/material/prebuilt-themes/purple-green.css);
+@import url(~@angular/material/prebuilt-themes/indigo-pink.css);
 * {
   margin: 0;
   padding: 0; }
+
+html, body {
+  width: 100%; }
 
 .mat-tab-label, .mat-tab-link, .mat-list .mat-list-item {
   color: #000000; }
 
 .ui-widget-content {
   border: none !important; }
+
+body .ui-inputtext {
+  background: none !important;
+  color: #c6c6c6 !important;
+  font-size: 18px !important;
+  padding: 10px 10px 10px 5px !important;
+  display: block;
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #c6c6c6 !important; }
+  body .ui-inputtext:focus {
+    outline: none; }
+  body .ui-inputtext:focus ~ label, body .ui-inputtext:valid ~ label {
+    top: -14px;
+    font-size: 12px;
+    color: #2196F3 !important; }
+  body .ui-inputtext:focus ~ .bar:before {
+    width: 320px !important; }
+  body .ui-inputtext label {
+    color: #c6c6c6;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 300ms ease all; }
 
 /*# sourceMappingURL=styles.css.map */

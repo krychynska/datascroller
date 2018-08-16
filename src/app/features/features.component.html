@@ -1,0 +1,35 @@
+<div class="checkboxes">
+  <section *ngFor="let day of arrayDays; index as i">
+    <label class="coolbox" [ngClass]="{'active': day.checked==true, 'not-active': day.checked===false}">
+      <!--<input type="checkbox" [value]="day" (click)="checked(day)"/>-->
+      <input type="checkbox"
+             [name]="day.name"
+             [value]="day.value"
+             (click)="checked()"
+             [(ngModel)]="day.checked"/>
+      <span>{{day.name}}</span>
+    </label>
+  </section>
+</div>
+<div class="wrapper material">
+    <div class="group">
+      <input type="text" required="required"/><span class="highlight"></span><span class="bar"></span>
+      <label>time</label>
+    </div>
+    <div class="group">
+      <input type="text" required="required"/><span class="highlight"></span><span class="bar"></span>
+      <label>Email</label>
+    </div>
+</div>
+<!--<div>-->
+  <!--<h3>material input </h3>-->
+  <!--<mat-form-field color="accent">-->
+    <!--<input matInput (focus)="displayTimePicker()" placeholder="Time">-->
+  <!--</mat-form-field>-->
+  <!--<p-calendar *ngIf="displayPicker===true" [(ngModel)]="date" [timeOnly]="true"></p-calendar>-->
+<!--</div>-->
+
+  <div class="time">
+    <h3>Time Only </h3>
+    <p-calendar [(ngModel)]="date" [timeOnly]="true"></p-calendar>
+  </div>

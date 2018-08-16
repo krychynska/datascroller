@@ -1,0 +1,73 @@
+.checkboxes label.coolbox {
+  padding: 8px;
+  margin: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  /* line-height: 23px; */
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 17px; }
+.checkboxes label.coolbox input {
+  display: none; }
+.checkboxes label.coolbox span {
+  color: white; }
+.checkboxes .active {
+  background: blue; }
+.checkboxes .not-active {
+  background: gray; }
+.checkboxes section {
+  display: inline-block; }
+
+.time {
+  padding: 40px 10px;
+  height: 250px; }
+
+.material .group {
+  position: relative;
+  margin: 45px 0; }
+.material input {
+  background: none;
+  color: #c6c6c6;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 320px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #c6c6c6; }
+  .material input:focus {
+    outline: none; }
+  .material input:focus ~ label, .material input:valid ~ label {
+    top: -14px;
+    font-size: 12px;
+    color: #2196F3; }
+  .material input:focus ~ .bar:before {
+    width: 320px; }
+.material label {
+  color: #c6c6c6;
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 300ms ease all; }
+.material .bar {
+  position: relative;
+  display: block;
+  width: 320px; }
+  .material .bar:before {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    background: #2196F3;
+    transition: 300ms ease all;
+    left: 0; }
+
+/*# sourceMappingURL=features.component.css.map */

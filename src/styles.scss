@@ -1,8 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/purple-green.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+$bg-color: #424242;
+$hl-color: #2196F3;
+$muted-color: mix(white, $bg-color, 70%);
+$trans-time: 300ms;
+$width: 320px;
+
 *{
   margin: 0;
   padding: 0;
+}
+html, body {
+  width: 100%;
 }
 
 .mat-tab-label, .mat-tab-link, .mat-list .mat-list-item {
@@ -10,4 +20,36 @@
 }
 .ui-widget-content {
   border: none !important;
+}
+body .ui-inputtext {
+    background: none !important;
+    color: $muted-color !important;
+    font-size: 18px !important;
+    padding: 10px 10px 10px 5px !important;
+    display: block;
+    border: none !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid $muted-color !important;
+    &:focus {
+      outline: none;
+    }
+    &:focus ~ label,
+    &:valid ~ label {
+      top: -14px;
+      font-size: 12px;
+      color: $hl-color !important;
+    }
+    &:focus ~ .bar:before {
+      width: $width !important;;
+    }
+  label {
+    color: $muted-color;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: $trans-time ease all;
+  }
 }
