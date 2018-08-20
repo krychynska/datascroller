@@ -4,10 +4,10 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
-  MatButtonModule,
+  MatButtonModule, MatCardModule,
   MatCheckboxModule, MatFormFieldModule,
   MatInputModule,
-  MatListModule,
+  MatListModule, MatSidenavModule,
   MatTabsModule,
   MatToolbarModule
 } from '@angular/material';
@@ -20,6 +20,7 @@ import {SuperheroesService} from './shared/services/superheroes.service';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { FeaturesComponent } from './features/features.component';
+import { HeroDetailsComponent } from './hero-details/hero-details.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FeaturesComponent } from './features/features.component';
     PrimeNgScrollComponent,
     NgxInfiniteScrollComponent,
     FeaturesComponent,
+    HeroDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +40,8 @@ import { FeaturesComponent } from './features/features.component';
     MatToolbarModule,
     MatButtonModule,
     MatCheckboxModule,
+    MatCardModule,
+    MatSidenavModule,
     MatListModule,
     MatTabsModule,
     DataScrollerModule,

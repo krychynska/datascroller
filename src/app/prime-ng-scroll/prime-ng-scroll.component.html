@@ -1,10 +1,15 @@
-<mat-list>
-<p-dataScroller [value]="heroes" [rows]="15">
-  <!--<p-dataScroller [value]="heroes" [rows]="10" (onLazyLoad)="loadData($event)" [lazy]="true">-->
-    <ng-template let-hero pTemplate="item">
-      <mat-list-item>
-        {{hero.firstName}} {{hero.lastName}}
-      </mat-list-item>
-    </ng-template>
-</p-dataScroller>
-</mat-list>
+<div class="data">
+  <mat-list>
+    <p-dataScroller [value]="heroes" [rows]="15">
+      <!--<p-dataScroller [value]="heroes" [rows]="10" (onLazyLoad)="loadData($event)" [lazy]="true">-->
+      <ng-template let-hero pTemplate="item">
+        <a (click)="setHero(hero)">
+          <mat-list-item>
+            {{hero.firstName}} {{hero.lastName}}
+          </mat-list-item>
+        </a>
+      </ng-template>
+    </p-dataScroller>
+  </mat-list>
+  <app-hero-details *ngIf="selectedItem" [hero]="selectedItem"></app-hero-details>
+</div>
